@@ -38,6 +38,9 @@ set nu
 set cursorline
 set cursorcolumn
 
+map <down> 5j
+map <up> 5k
+
  " 杜可: 打开vim自动打开nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree
