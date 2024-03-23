@@ -33,6 +33,12 @@
 " Sets how many lines of history VIM has to remember
 set history=500
 
+" set by duke
+set nu
+set cursorline
+set cursorcolumn
+
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
