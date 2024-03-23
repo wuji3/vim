@@ -33,11 +33,15 @@
 " Sets how many lines of history VIM has to remember
 set history=500
 
-" set by duke
+" 杜可: 
 set nu
 set cursorline
 set cursorcolumn
 
+ " 杜可: 打开vim自动打开nerdtree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree
+autocmd FileType nerdtree autocmd VimEnter * if bufwinnr('^NERD_tree') != -1 | q | endif
 
 " Enable filetype plugins
 filetype plugin on
@@ -57,11 +61,6 @@ nmap <leader>w :w!<cr>
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
-
- " 设置打开vim自动打开nerdtree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree
-autocmd FileType nerdtree autocmd VimEnter * if bufwinnr('^NERD_tree') != -1 | q | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
