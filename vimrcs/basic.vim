@@ -44,6 +44,8 @@ map <up> 5k
 " 杜可: 打开vim自动打开nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree
+wincmd w
+autocmd VimEnter * wincmd w
 autocmd FileType nerdtree autocmd VimEnter * if bufwinnr('^NERD_tree') != -1 | q | endif
 " 杜可: ctrl+o开关NERDTree
 map <C-o> :NERDTreeToggle<CR>
