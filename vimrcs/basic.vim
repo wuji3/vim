@@ -41,10 +41,12 @@ set cursorcolumn
 map <down> 5j
 map <up> 5k
 
- " 杜可: 打开vim自动打开nerdtree
+" 杜可: 打开vim自动打开nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree
 autocmd FileType nerdtree autocmd VimEnter * if bufwinnr('^NERD_tree') != -1 | q | endif
+" 杜可: ctrl+o开关NERDTree
+map <C-o> :NERDTreeToggle<CR>
 
 " Enable filetype plugins
 filetype plugin on
