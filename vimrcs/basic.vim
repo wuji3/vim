@@ -65,7 +65,7 @@ nmap <leader>w :w!<cr>
 wincmd w
 autocmd VimEnter * wincmd w
 autocmd FileType nerdtree autocmd VimEnter * if bufwinnr('^NERD_tree') != -1 | q | endif
-map <C-o> :NERDTreeToggle<CR>
+map \\ :NERDTreeToggle<CR>
 set switchbuf+=newtab
 nmap <leader>11 :tabn1<cr>
 nmap <leader>22 :tabn2<cr>
