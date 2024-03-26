@@ -33,22 +33,14 @@
 " Sets how many lines of history VIM has to remember
 set history=500
 
-" 杜可: 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 杜可: vim相关配置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nu
 set cursorline
 set cursorcolumn
-
 map <down> 5j
 map <up> 5k
-
-" 杜可: 打开vim自动打开nerdtree
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * NERDTree
-wincmd w
-autocmd VimEnter * wincmd w
-autocmd FileType nerdtree autocmd VimEnter * if bufwinnr('^NERD_tree') != -1 | q | endif
-" 杜可: ctrl+o开关NERDTree
-map <C-o> :NERDTreeToggle<CR>
 
 " Enable filetype plugins
 filetype plugin on
@@ -64,6 +56,23 @@ let mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 杜可: NERDTree 相关配置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * NERDTree
+wincmd w
+autocmd VimEnter * wincmd w
+autocmd FileType nerdtree autocmd VimEnter * if bufwinnr('^NERD_tree') != -1 | q | endif
+map <C-o> :NERDTreeToggle<CR>
+set switchbuf+=newtab
+nmap <leader>1 :tabn1<cr>
+nmap <leader>2 :tabn2<cr>
+nmap <leader>3 :tabn3<cr>
+nmap <leader>4 :tabn4<cr>
+nmap <leader>5 :tabn5<cr>
+nmap <leader>c :tabc<cr>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
