@@ -67,11 +67,11 @@ autocmd VimEnter * wincmd w
 autocmd FileType nerdtree autocmd VimEnter * if bufwinnr('^NERD_tree') != -1 | q | endif
 map <C-o> :NERDTreeToggle<CR>
 set switchbuf+=newtab
-nmap <leader>1 :tabn1<cr>
-nmap <leader>2 :tabn2<cr>
-nmap <leader>3 :tabn3<cr>
-nmap <leader>4 :tabn4<cr>
-nmap <leader>5 :tabn5<cr>
+nmap <leader>11 :tabn1<cr>
+nmap <leader>22 :tabn2<cr>
+nmap <leader>33 :tabn3<cr>
+nmap <leader>44 :tabn4<cr>
+nmap <leader>55 :tabn5<cr>
 nmap <leader>c :tabc<cr>
 
 " :W sudo saves the file
