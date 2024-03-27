@@ -41,6 +41,12 @@ set cursorline
 set cursorcolumn
 map <down> 5j
 map <up> 5k
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
+inoremap < <><Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
 
 " Enable filetype plugins
 filetype plugin on
