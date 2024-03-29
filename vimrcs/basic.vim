@@ -47,6 +47,7 @@ inoremap { {}<Esc>i
 inoremap < <><Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
+inoremap jj <Esc>
 
 " Enable filetype plugins
 filetype plugin on
