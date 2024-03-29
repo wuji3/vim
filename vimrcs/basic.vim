@@ -48,6 +48,7 @@ inoremap < <><Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 inoremap jj <Esc>
+nmap .. yyp
 
 " Enable filetype plugins
 filetype plugin on
